@@ -13,7 +13,7 @@ function App() {
     <Routes>
       <Route exact path="/" element={<Post />} />
       <Route path="/blog" element={<Post />} />         
-      <Route path="/createblog" element={<BlogPostForm />} />         
+      {/* <Route path="/createblog" element={<BlogPostForm />} />          */}
       <Route path="/detail/:id" element={<DetailPage />} />
     
     </Routes>

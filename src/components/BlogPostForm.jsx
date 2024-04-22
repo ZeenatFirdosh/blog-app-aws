@@ -13,13 +13,14 @@ const BlogPostForm = () => {
   const handleCreatePost = async (newPost) => {
     try {
       await axios.post('https://qbw3paee82.execute-api.ap-south-1.amazonaws.com/dev/blog', {
+        data:JSON.stringify(newPost)
+      },{
         headers: {
             "Access-Control-Allow-Headers" : "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
             "Content-Type": "application/json"
-            },
-        data:JSON.stringify(newPost)
+            }
       });
       alert('Post created successfully');
     } catch (error) {
