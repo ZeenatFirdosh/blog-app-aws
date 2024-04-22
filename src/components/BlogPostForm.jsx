@@ -14,9 +14,10 @@ const BlogPostForm = () => {
     try {
       await axios.post('https://qbw3paee82.execute-api.ap-south-1.amazonaws.com/dev/blog', {
         headers: {
-            "Access-Control-Allow-Headers" : "Content-Type",
+            "Access-Control-Allow-Headers" : "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
             "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+            "Content-Type": "application/json"
             },
         data:JSON.stringify(newPost)
       });
